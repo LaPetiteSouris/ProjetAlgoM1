@@ -3,30 +3,24 @@ package figure;
 /**
  * Created by tung on 10/27/15.
  */
-public class Cercle {
-    private Point centre;
-    private double rayon;
+public class Cercle extends Eclipse {
 
 
-    public Cercle(Point p, double rayon) {
-        this.centre = p;
-        this.rayon = rayon;
+
+    public Cercle(Point p, double r) {
+        super(r, r, p);
     }
 
-    public Point getCentre()
-    {
-        return this.centre;
-    }
-    public double getRayon()
-    {
-        return this.rayon;
-    }
 
     public double calculAre() {
-        return Math.pow(rayon, 2) * 3.14;
+        return Math.pow(super.getR1(), 2) * 3.14;
     }
 
     public double calculParametre() {
-        return (2 * rayon) * 3.14;
+        return (2 * super.getR2()) * 3.14;
+    }
+
+    String getInfosParticulieres() {
+        return "Centre (" + super.getCentre().getx() + ", " + super.getCentre().gety() + "),   r: " + super.getR1();
     }
 }

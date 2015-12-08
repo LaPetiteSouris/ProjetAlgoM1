@@ -3,21 +3,23 @@ package figure;
 /**
  * Created by tung on 10/27/15.
  */
-public class Rectangle {
-    private Point centre;
+public class Rectangle extends Paralellogramme implements Measurable {
     private double lx;
     private double ly;
-    private Point somme1, somme2, somme3, somme4;
+    public Rectangle(Point[] sommets)
+    {
+        super(sommets);
+    }
 
 
-    public Rectangle(Point p, double lar, double ly) {
-        this.centre = p;
-        this.lx = lar;
+    public Rectangle(Point p, double lax, double ly) {
+        super(p, lax,ly,0);
+        this.lx = lax;
         this.ly = ly;
     }
 
     public Point getCentre() {
-        return this.centre;
+        return super.getCentre();
     }
 
     public double getLx() {
@@ -28,11 +30,16 @@ public class Rectangle {
         return this.ly;
     }
 
-    public double calculAre() {
+    public double calculeaire() {
         return lx * ly;
     }
 
-    public double calculParametre() {
+    public double calculeparametre() {
         return 2 * (lx + ly);
     }
+
+    public String getInfosParticulieres() {
+        return " centre (x,y) = " + super.getCentre().getx() + "," + super.getCentre().gety() + " largeur " + getLy() + " hauteur " + getLx();
+    }
+
 }

@@ -447,6 +447,7 @@ class TestDessinFigure extends JFrame implements ActionListener {
     }
 
     private void afficherFigure() {
+        /*
         if (cercleRB.isSelected()) {
             partInfoTA.setText("Area:  " + cercle.calculAre() + ", Parametre: " + cercle.calculParametre());
 
@@ -461,9 +462,9 @@ class TestDessinFigure extends JFrame implements ActionListener {
         if (triangleRB.isSelected()) {
             partInfoTA.setText("Area: " + triangle.calculAre()  + ", Parametre " + triangle.calculParametre());
 
-            commonInfoTA.setText("Triangle de centre: ("+triangle.getCentre().getx()+","+triangle.getCentre().gety() +"), et hauteur "+ triangle.getHauteur()+ " et base " +triangle.getBase());
+            commonInfoTA.setText("Triangle de centre: ("+triangle.calculeCentre().getx()+","+triangle.calculeCentre().gety() +"), et hauteur "+ triangle.getHauteur()+ " et base " +triangle.getBase());
         }
-
+*/
 
 
         // A completer

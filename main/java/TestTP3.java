@@ -1,7 +1,4 @@
-import figure.Cercle;
-import figure.Point;
-import figure.Rectangle;
-import figure.Triangle;
+import figure.*;
 
 import java.util.Arrays;
 
@@ -10,6 +7,15 @@ import java.util.Arrays;
  */
 public class TestTP3 {
     public static void main(String[] arg) {
+        Point p1 = new Point(0, 0);
+        Point p2 = new Point(0, 2);
+        Point p3 = new Point(2, 0);
+        Point p4 = new Point(2,2);
+        Point[] p = {p1, p2, p3,p4};
+        figure.Carre car= new Carre(p1,20.0);
+        System.out.println(car.getInfosParticulieres());
+
+        /*
         Point p1 = new Point(0, 4);
         Point p2 = new Point(3, 0);
         Point p3 = new Point(0, 0);
@@ -40,7 +46,7 @@ public class TestTP3 {
 
         if (are_triangle == 6 && para_triangle == 12) {
             System.out.println("Triangle class verified");
-        }
+        }*/
     }
 
 }
