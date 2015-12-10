@@ -1,26 +1,26 @@
 package figure;
 
+import java.awt.*;
+
 /**
  * Created by tung on 10/27/15.
  */
-public class Cercle extends Eclipse {
+public class Cercle extends Ellipse {
 
 
 
-    public Cercle(Point p, double r) {
+    public Cercle(double r,Point p) {
         super(r, r, p);
     }
 
 
-    public double calculAre() {
-        return Math.pow(super.getR1(), 2) * 3.14;
-    }
-
-    public double calculParametre() {
-        return (2 * super.getR2()) * 3.14;
-    }
-
-    String getInfosParticulieres() {
+    public String getInfosParticulieres() {
         return "Centre (" + super.getCentre().getx() + ", " + super.getCentre().gety() + "),   r: " + super.getR1();
+    }
+
+    public void dessiner(Graphics g){
+
+        g.fillOval((int)getCentre().getx(), (int)getCentre().gety(), (int)getR1(), (int)getR2());
+        g.setColor(Color.red);
     }
 }

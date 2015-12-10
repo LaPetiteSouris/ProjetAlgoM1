@@ -1,5 +1,8 @@
 package figure;
 
+import java.awt.*;
+import java.awt.geom.Path2D;
+
 /**
  * Created by tung on 10/27/15.
  */
@@ -71,5 +74,19 @@ public class Triangle extends Polygone implements Measurable {
         double edge2 = somme1.calculateDistance(somme3);
         double edge3 = somme2.calculateDistance(somme3);
         return edge1 + edge2 + edge3;
+    }
+
+    public void dessiner(Graphics g){
+        Graphics2D g2d=(Graphics2D)g;
+        Path2D.Double chemin=new Path2D.Double();
+        //chemin.moveTo(0, 0);
+        chemin.moveTo(getsommets()[0].getx(),getsommets()[0].gety());
+        chemin.lineTo(getsommets()[1].getx(),getsommets()[1].gety());
+        chemin.lineTo(getsommets()[2].getx(),getsommets()[2].gety());
+        chemin.closePath();
+        g2d.fill(chemin);
+        g2d.setColor(Color.red);
+
+
     }
 }

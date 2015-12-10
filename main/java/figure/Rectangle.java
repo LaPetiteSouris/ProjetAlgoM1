@@ -1,9 +1,11 @@
 package figure;
 
+import java.awt.*;
+
 /**
  * Created by tung on 10/27/15.
  */
-public class Rectangle extends Paralellogramme implements Measurable {
+public class Rectangle extends Parallelogramme implements Measurable {
     private double lx;
     private double ly;
     public Rectangle(Point[] sommets)
@@ -40,6 +42,12 @@ public class Rectangle extends Paralellogramme implements Measurable {
 
     public String getInfosParticulieres() {
         return " centre (x,y) = " + super.getCentre().getx() + "," + super.getCentre().gety() + " largeur " + getLy() + " hauteur " + getLx();
+    }
+
+    public void dessiner(Graphics g){
+
+        g.fillRect((int)super.getCentre().getx(), (int)super.getCentre().gety(), (int)super.getLx(), (int)super.getLy());
+        g.setColor(Color.red);
     }
 
 }

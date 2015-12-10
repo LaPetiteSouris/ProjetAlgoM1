@@ -1,7 +1,6 @@
 package figure;
 
 
-
 /**
  * Created by tung on 10/27/15.
  */
@@ -14,12 +13,26 @@ public class Point {
         this.y = y;
     }
 
+    public Point() {
+
+    }
+
     public double getx() {
         return this.x;
     }
 
     public double gety() {
         return this.y;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+
+    }
+
+    public void setY(double y) {
+        this.y = x;
+
     }
 
     public double calculateDistance(Point p) {
